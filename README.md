@@ -407,4 +407,4 @@ if __name__ == "__main__":
 ```
 
 #### check_2.csv
-![check2!](/image/lab4/imgs2.png)
+![check2!](/image/lab4/img2.png)
