@@ -42,7 +42,7 @@ python_labs/
   print(f'Привет {input()}! Через год тебе будет {int(input()) + 1}')
 ```
 
-![ex1!](/images/lab1/img1.png)
+![ex1!](/image/lab1/img1.png)
 
 ### Задание 2
 
@@ -51,7 +51,7 @@ a, b = float(input()), float(input())
 print(f'sum: {a + b}; avg: {(a + b) / 2}')
 ```
 
-![ex2!](/images/lab1/img2.png)
+![ex2!](/image/lab1/img2.png)
 
 ### Задание 3
 
@@ -69,7 +69,7 @@ print(f'НДС: {vat_amount}')
 print(f'Итого к оплате: {total}')
 ```
 
-![ex3!](/images/lab1/img3.png)
+![ex3!](/image/lab1/img3.png)
 
 ### Задание 4
 
@@ -78,7 +78,7 @@ min = int(input())
 print(f'{min//60}:{min % 60}')
 ```
 
-![ex4!](/images/lab1/img4.png)
+![ex4!](/image/lab1/img4.png)
 
 ### Задание 5
 
@@ -90,7 +90,7 @@ print(f'Инициалы: {''.join(ini)}')
 print(f'Длина (символов): {len(con) + 2}')
 ```
 
-![ex5!](/images/lab1/img5.png)
+![ex5!](/image/lab1/img5.png)
 
 ### Задание 6
 
@@ -106,6 +106,7 @@ for i in range(0, k):
         zaoch += 1
 print(och, zaoch)
 ```
+![ex5!](/image/lab1/img6.png)
 
 ### Задание 7
 
@@ -124,6 +125,8 @@ for i in range(0, len(N)):
             con += 1
 print(name)
 ```
+
+![ex5!](/image/lab1/img7.png)
 
 ## Лабораторная работа 2
 
@@ -171,7 +174,7 @@ print(flatten(([1, 2], (3, 4, 5))))
 print(flatten([[1], [], [2, 3]]))
 print(flatten([[1, 2], "ab"]))
 ```
-![arrays!](/images/lab2/img1.png)
+![arrays!](/image/lab2/img1.png)
 
 ### Задание B — matrix.py
 
@@ -229,7 +232,7 @@ print(col_sums([[-1, 1], [10, -10]]))
 print(col_sums([[0, 0], [0, 0]]))
 print(col_sums([[1, 2], [3]]))
 ```
-![matrix!](/images/lab2/img2.png)
+![matrix!](/image/lab2/img2.png)
 
 ### Задание C — tuples.py
 
@@ -258,7 +261,7 @@ print(format_record(("Петров Пётр", "IKBO-12", 5.0)))
 print(format_record(("Петров Пётр Петрович", "IKBO-12", 5.0)))
 print(format_record(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
 ```
-![tuples!](/images/lab2/img3.png)
+![tuples!](/image/lab2/img3.png)
 
 ## Лабораторная работа 3
 
@@ -322,7 +325,7 @@ def info(Beautiful=False):
 
 info(Beautiful=True)
 ```
-![text_stats!](/images/lab3/img1.png)
+![text_stats!](/image/lab3/img1.png)
 
 ## Лабораторная работа 4
 
@@ -366,7 +369,7 @@ write_csv([("word","count"),("test",3)], "data/check.csv")  # создаст CSV
 ```
 
 #### input.txt
-![input!](/images/lab4/img1.png)
+![input!](/image/lab4/img1.png)
 
 ### Задание B — скрипт `src/lab04/text_report.py`
 
@@ -404,4 +407,4 @@ if __name__ == "__main__":
 ```
 
 #### check_2.csv
-![check2!](/images/lab4/imgs2.png)
+![check2!](/image/lab4/imgs2.png)
