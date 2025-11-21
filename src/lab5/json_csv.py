@@ -71,31 +71,32 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
 
-# Задание 1
-data = [{"name": "Alice", "age": 22}, {"name": "Bob", "age": 25}]
-path = Path("data/out/people.json")
+if __name__ == "__main__":
+    # Задание 1
+    data = [{"name": "Alice", "age": 22}, {"name": "Bob", "age": 25}]
+    path = Path("data/out/people.json")
 
-with path.open("w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-with path.open("r", encoding="utf-8") as f:
-    loaded = json.load(f)
+    with path.open("r", encoding="utf-8") as f:
+        loaded = json.load(f)
 
 
-# Задание 2
-rows = [
-    {"name": "Alice", "age": "22", "city": "SPB"},
-    {"name": "Bob", "age": "25", "city": "Moscow"}
-]
+    # Задание 2
+    rows = [
+        {"name": "Alice", "age": "22", "city": "SPB"},
+        {"name": "Bob", "age": "25", "city": "Moscow"}
+    ]
 
-with open("data/out/people.csv", "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["name", "age", "city"])
-    writer.writeheader()
-    for row in rows:
-        writer.writerow(row)
+    with open("data/out/people.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["name", "age", "city"])
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
 
-with open("data/out/people.csv", "r", encoding="utf-8") as f:
-    reader = csv.DictReader(f)
-    data = list(reader)
+    with open("data/out/people.csv", "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        data = list(reader)
 
-    
+        

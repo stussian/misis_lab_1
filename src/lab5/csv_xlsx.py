@@ -63,25 +63,26 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 
     wb.save(str(xlsx_file))
 
-# Задание 3
-wb = Workbook()
-ws = wb.active
-ws.title = "Sheet1"
+if __name__ == "__main__":
+    # Задание 3
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Sheet1"
 
-with open("data/samples/people.csv", encoding="utf-8") as f:
-    reader = csv.reader(f)
-    for row in reader:
-        ws.append(row)
+    with open("data/samples/people.csv", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            ws.append(row)
 
-wb.save("data/out/people.xlsx")
+    wb.save("data/out/people.xlsx")
 
-# Задание 4
-with open("data/samples/people.json", "r", encoding="utf-8") as jf:
-    data = json.load(jf)
+    # Задание 4
+    with open("data/samples/people.json", "r", encoding="utf-8") as jf:
+        data = json.load(jf)
 
-with open("data/out/people_from_json.csv", "w", newline="", encoding="utf-8") as cf:
-    fieldnames = sorted({key for obj in data for key in obj})
-    writer = csv.DictWriter(cf, fieldnames=fieldnames)
-    writer.writeheader()
-    for row in data:
-        writer.writerow(row)
+    with open("data/out/people_from_json.csv", "w", newline="", encoding="utf-8") as cf:
+        fieldnames = sorted({key for obj in data for key in obj})
+        writer = csv.DictWriter(cf, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in data:
+            writer.writerow(row)
